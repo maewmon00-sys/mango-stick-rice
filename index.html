@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ข้าวเหนียวมะม่วง ขนมไทยแสนอร่อย</title>
+<meta name="description" content="เว็บไซต์ให้ความรู้เกี่ยวกับข้าวเหนียวมะม่วง ประวัติ ส่วนผสม วิธีทำ และแกลเลอรี่ เพื่อเผยแพร่วัฒนธรรมอาหารไทย">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600&family=Sarabun:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <nav class="container nav" aria-label="เมนูหลัก">
+    <a href="#home" class="brand" id="navTitle">🥭 ข้าวเหนียวมะม่วง</a>
+    <button class="burger" id="burger" aria-label="เปิดเมนู" aria-expanded="false">☰</button>
+    <ul id="menu">
+      <li><a class="link" href="#home">หน้าแรก</a></li>
+      <li><a class="link" href="#history">ประวัติศาสตร์</a></li>
+      <li><a class="link" href="#ingredients">ส่วนผสม</a></li>
+      <li><a class="link" href="#how-to">วิธีการทำ</a></li>
+      <li><a class="link" href="#gallery">แกลเลอรี่</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+<!-- หน้าแรก -->
+<section id="home" aria-labelledby="hero-title">
+  <div class="container hero">
+    <div class="reveal">
+      <span class="tag" id="heroTag"></span>
+      <h1 id="hero-title"><b id="t1">ข้าวเหนียวมะม่วง</b><br><span id="t2">ขนมไทยแสนอร่อย</span></h1>
+      <p id="heroIntro"></p>
+      <a href="#history" class="btn" id="startBtn">เริ่มเรียนรู้</a>
+    </div>
+    <div class="hero-img reveal" id="heroImg"></div>
+  </div>
+</section>
+
+<!-- ประวัติศาสตร์ -->
+<section id="history" class="alt" aria-labelledby="history-title">
+  <div class="container">
+    <div class="head reveal"><small>HISTORY</small><h2 id="history-title">ประวัติศาสตร์และความสำคัญ</h2></div>
+    <div class="history">
+      <figure class="reveal" id="historyFig"><figcaption id="historyCap"></figcaption></figure>
+      <div class="reveal" id="historyText"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ส่วนผสม -->
+<section id="ingredients" aria-labelledby="ing-title">
+  <div class="container">
+    <div class="head reveal"><small>INGREDIENTS</small><h2 id="ing-title">ส่วนผสม</h2></div>
+    <div class="grid ing-grid" id="ingGrid"></div>
+  </div>
+</section>
+
+<!-- วิธีการทำ -->
+<section id="how-to" class="alt" aria-labelledby="how-title">
+  <div class="container">
+    <div class="head reveal"><small>HOW TO MAKE</small><h2 id="how-title">วิธีการทำ</h2></div>
+    <div class="steps" id="steps"></div>
+  </div>
+</section>
+
+<!-- แกลเลอรี่ -->
+<section id="gallery" aria-labelledby="gal-title">
+  <div class="container">
+    <div class="head reveal"><small>GALLERY</small><h2 id="gal-title">แกลเลอรี่</h2></div>
+    <div class="grid gallery" id="galleryGrid"></div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <p id="footerText"></p>
+  <small id="footerNote"></small>
+</footer>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="ดูภาพขนาดใหญ่">
+  <button class="lb-btn lb-close" id="lbClose" aria-label="ปิด">×</button>
+  <button class="lb-btn lb-prev" id="lbPrev" aria-label="ภาพก่อนหน้า">‹</button>
+  <figure><img id="lbImg" src="" alt=""><figcaption id="lbCap"></figcaption></figure>
+  <button class="lb-btn lb-next" id="lbNext" aria-label="ภาพถัดไป">›</button>
+</div>
+
+<script src="data/content.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
